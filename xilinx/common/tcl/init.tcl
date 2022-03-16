@@ -20,6 +20,7 @@ if {[file exists $boardiptcl]} {
 }
 
 # AR 58526 <http://www.xilinx.com/support/answers/58526.html>
+add_files [glob $wrkdir/../../../../generators/dsagen2/fpga/*/*.xci]
 set xci_files [get_files -all {*.xci}]
 foreach xci_file $xci_files {
   set_property GENERATE_SYNTH_CHECKPOINT {false} -quiet $xci_file
